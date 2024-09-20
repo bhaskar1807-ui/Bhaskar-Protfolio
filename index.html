@@ -5,49 +5,69 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
+    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
+
     <link rel="stylesheet" href="css/aos.css">
+
     <link rel="stylesheet" href="css/ionicons.min.css">
+    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-      #typing-animation {
-        position: relative;
-        font-size: 30px;
-        font-weight: bold;
-        color: rgb(255, 255, 255);
-        overflow: hidden;
-        white-space: nowrap;
-        animation: typing 3s steps(20, end) infinite;
-      }
+    /* Custom Styles */
 
-      @keyframes typing {
-        from { width: 0; }
-        to { width: 100%; }
-      }
+    /* Animation styles */
+    #typing-animation {
+      position: relative;
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3s steps(20, end) infinite;
+    }
 
-      .zoom-effect:hover {
-        transform: scale(1.1);
-        transition: 0.3s;
+    @keyframes typing {
+      from {
+        width: 0;
       }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Project image zoom effect */
+    .zoom-effect {
+      overflow: hidden;
+      transition: transform 0.3s ease-out;
+    }
+
+    .zoom-effect:hover {
+      transform: scale(1.1);
+    }
     </style>
   </head>
-  
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    
+	  
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="#home-section">Bhaskar Rao Gorripati</a>
         <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
+
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav nav ml-auto">
             <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
@@ -60,6 +80,7 @@
       </div>
     </nav>
     
+    <!-- Home Section -->
     <section id="home-section" class="hero">
       <div class="home-slider owl-carousel">
         <div class="slider-item">
@@ -73,11 +94,127 @@
                 <div class="text">
                   <span class="subheading">Hello!</span>
                   <h1 class="mb-4 mt-3">I'm <span>Bhaskar Rao Gorripati</span></h1>
-                  <span id="typing-animation">DevOps Engineer</span>
-                  <h2>A Specialist in CI/CD, Cloud, and Infrastructure</h2>
-                  <p><a href="https://www.linkedin.com/in/bhaskarrao-g-3484a518a" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-                  <a href="https://github.com" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+
+                  <!-- Typing Animation -->
+                  <span id="typing-animation"></span>
+                  <script>
+                    // Initialize the typing animation
+                    const typingAnimationElement = document.getElementById('typing-animation');
+
+                    // Create an array of typing text
+                    const typingTexts = [
+                      'DevOps Engineer',
+                      'Cloud Enthusiast',
+                      'SRE Specialist'
+                    ];
+
+                    let typingIndex = 0;
+
+                    function typeText() {
+                      const text = typingTexts[typingIndex];
+                      let charIndex = 0;
+
+                      function typeChar() {
+                        if (charIndex < text.length) {
+                          typingAnimationElement.textContent += text.charAt(charIndex);
+                          charIndex++;
+                          setTimeout(typeChar, 150);
+                        } else {
+                          setTimeout(eraseText, 2000);
+                        }
+                      }
+
+                      function eraseText() {
+                        if (charIndex > 0) {
+                          typingAnimationElement.textContent = text.substring(0, charIndex - 1);
+                          charIndex--;
+                          setTimeout(eraseText, 100);
+                        } else {
+                          typingIndex = (typingIndex + 1) % typingTexts.length;
+                          setTimeout(typeText, 500);
+                        }
+                      }
+
+                      typeChar();
+                    }
+
+                    typeText();
+                  </script>
+
+                  <h2>Specializing in CI/CD, Cloud Engineering, and SRE</h2>
+                  <p>
+                    <a href="mailto:bgorripa@aum.edu" class="btn btn-primary py-3 px-4">Email Me</a> 
+                    <a href="http://www.linkedin.com/in/bhaskarrao-g-3484a518a" class="btn btn-white btn-outline-white py-3 px-4">LinkedIn</a>
+                  </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- You can add more slider items if needed -->
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row d-flex align-items-stretch">
+          <div class="col-md-6 col-lg-5 d-flex">
+            <div class="img-about img d-flex align-items-stretch">
+              <div class="overlay"></div>
+              <img src="images/profile.jpg" class="img-fluid rounded b-shadow-a" alt="Profile Picture">
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+            <div class="row justify-content-start pb-3">
+              <div class="col-md-12 heading-section ftco-animate">
+                <h1 class="big">About</h1>
+                <h2 class="mb-4">About Me</h2>
+                <p>With over 1.10 years of experience in DevOps, I have strengths in Continuous Integration and Delivery (CI/CD), Linux management, Cloud Engineering, Site Reliability Engineering (SRE), Build & Release management, and Cloud Infrastructure, including AWS, GCP, Microsoft Azure, and OpenStack. I aim to contribute to an organization by leveraging my skills and growing professionally.</p>
+                <ul class="about-info mt-4 px-md-0 px-2">
+                  <li class="d-flex"><span>Name:</span> <span>Bhaskar Rao Gorripati</span></li>
+                  <li class="d-flex"><span>Job Role:</span> <span>DevOps Engineer</span></li>
+                  <li class="d-flex"><span>Email:</span> <span><a href="mailto:bgorripa@aum.edu">bgorripa@aum.edu</a></span></li>
+                  <li class="d-flex"><span>Phone:</span> <span>+1 3348409113</span></li>
+                  <li class="d-flex"><span>Location:</span> <span>Montgomery, AL, USA</span></li>
+                  <li class="d-flex"><span>LinkedIn:</span> <span><a href="http://www.linkedin.com/in/bhaskarrao-g-3484a518a">LinkedIn Profile</a></span></li>
+                  <li class="d-flex"><span>Certifications:</span> <span>Microsoft Power BI Data Analyst, Azure Certification</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="skill-mf">
+              <p class="title-s">Technical Skills</p>
+              <span>Jenkins CI/CD Management</span> <span class="pull-right">90%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+              
+              <span>Cloud Platforms (AWS, Azure, GCP)</span> <span class="pull-right">85%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+              
+              <span>Linux Management</span> <span class="pull-right">80%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+              
+              <span>Bitbucket & Jira Management</span> <span class="pull-right">85%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+              
+              <span>Code Deployment & Server Maintenance</span> <span class="pull-right">90%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                  aria-valuemax="100"></div>
               </div>
             </div>
           </div>
@@ -85,78 +222,225 @@
       </div>
     </section>
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <!-- Resume Section -->
+    <section class="ftco-section ftco-no-pb" id="resume-section">
       <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>DevOps Engineer with experience in CI/CD pipelines, cloud infrastructure, and automation. Seeking to leverage my skills to contribute to an organization's success while achieving personal and professional growth.</p>
+          </div>
+        </div>
+
         <div class="row">
-          <div class="col-md-6 col-lg-5 d-flex">
-            <div class="img-about img d-flex align-items-stretch">
-              <div class="overlay"></div>
-              <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+          <h1 class="big-4">Experience</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">June 2021 – April 2023</span>
+              <h2>DevOps Engineer</h2>
+              <span class="position">Infosys | Client: Broadcom</span>
+              <p class="mt-4">
+                <ul>
+                  <li>Managed Jira projects, customized workflows, and adjusted permission schemes.</li>
+                  <li>Developed and maintained image descriptors and pipelines in Bitbucket and Jenkins.</li>
+                  <li>Monitored and maintained CI/CD pipelines in Jenkins, ensuring smooth code deployment.</li>
+                  <li>Resolved Jenkins job failures promptly to minimize downtime.</li>
+                  <li>Deployed code changes at the application level, maintaining server health.</li>
+                </ul>
+              </p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-            <h1 class="big">About</h1>
-            <h2 class="mb-4">About Me</h2>
-            <p>I am a DevOps Engineer with over 1.10 years of experience in Continuous Integration and Delivery (CI/CD), Cloud Engineering, and Site Reliability Engineering (SRE). I am passionate about automating and optimizing software development workflows using tools like Jenkins, Bitbucket, and AWS.</p>
-            <ul class="about-info mt-4 px-md-0 px-2">
-              <li><span>Location:</span> Montgomery, AL</li>
-              <li><span>Job Role:</span> DevOps Engineer</li>
-              <li><span>Email:</span> bgorripa@aum.edu</li>
-              <li><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/bhaskarrao-g-3484a518a">LinkedIn</a></li>
-              <li><span>Certifications:</span> Microsoft Power BI Data Analyst, Azure Certification</li>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+          <h1 class="big-4">Education</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Anticipated Dec 2024</span>
+              <h2>Master of Science in Management Information Systems</h2>
+              <span class="position">Auburn University at Montgomery, AL</span>
+              <p class="mt-4">GPA: 3.7/4</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">August 2020</span>
+              <h2>Bachelor of Technology in Electrical and Electronics Engineering</h2>
+              <span class="position">Acharya Nagarjuna University, Guntur</span>
+              <p class="mt-4">GPA: 7.3/10</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are some of the projects I've worked on in DevOps, Cloud Engineering, and Automation.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <!-- Project 1 -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/project1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">CI/CD Pipeline Automation</a></h3>
+                <p>Implemented automated CI/CD pipelines using Jenkins and Bitbucket, reducing deployment time by 40%.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/project2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">Cloud Infrastructure Setup</a></h3>
+                <p>Designed and deployed scalable cloud infrastructure on AWS and Azure for various applications.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/project3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">Monitoring and Logging Solutions</a></h3>
+                <p>Implemented monitoring solutions using tools like Prometheus and Grafana to enhance system reliability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Feel free to reach out to me via email or phone. I'm open to discussing new projects or opportunities.</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <p>Montgomery, AL, USA</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p><a href="tel://13348409113">+1 334-840-9113</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email Address</h3>
+              <p><a href="mailto:bgorripa@aum.edu">bgorripa@aum.edu</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">LinkedIn</h3>
+              <p><a href="http://www.linkedin.com/in/bhaskarrao-g-3484a518a">View Profile</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="row justify-content-center">
+          <div class="col-md-7 ftco-animate text-center">
+            <h2>Connect with Me</h2>
+            <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+              <li class="ftco-animate"><a href="http://www.linkedin.com/in/bhaskarrao-g-3484a518a"><span class="icon-linkedin"></span></a></li>
+              <!-- Add other social icons if available -->
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="ftco-section" id="resume-section">
+    <!-- Footer -->
+    <footer class="ftco-footer ftco-section">
       <div class="container">
-        <h2>Resume</h2>
         <div class="row">
-          <div class="col-md-6">
-            <h3>Experience</h3>
-            <div class="resume-wrap">
-              <span class="date">June 2021 – April 2023</span>
-              <h2>DevOps Engineer</h2>
-              <span class="position">Infosys | Client: Broadcom</span>
-              <p>• Managed Jira projects and workflows, set up CI/CD pipelines in Jenkins, and optimized Bitbucket repositories.<br>
-                • Monitored and resolved Jenkins job failures.<br>
-                • Deployed application-level changes, ensuring server health and uptime.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h3>Education</h3>
-            <div class="resume-wrap">
-              <span class="date">Anticipated Dec 2024</span>
-              <h2>Master of Science, Management Information Systems</h2>
-              <span class="position">Auburn University, Montgomery, AL</span>
-            </div>
-            <div class="resume-wrap">
-              <span class="date">August 2020</span>
-              <h2>Bachelor of Technology, Electrical and Electronics Engineering</h2>
-              <span class="position">Acharya Nagarjuna University, Guntur</span>
-            </div>
+          <div class="col-md-12 text-center">
+            <p>
+              &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by Colorlib
+            </p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="ftco-section" id="contact-section">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:bgorripa@aum.edu">bgorripa@aum.edu</a></p>
-        <p>Phone: +1 3348409113</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/bhaskarrao-g-3484a518a">LinkedIn</a></p>
-      </div>
-    </section>
-
-    <footer class="ftco-footer ftco-section">
-      <div class="container text-center">
-        <p>&copy; 2024 Bhaskar Rao Gorripati. All rights reserved.</p>
-      </div>
     </footer>
 
+    <!-- Loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+      
   </body>
 </html>

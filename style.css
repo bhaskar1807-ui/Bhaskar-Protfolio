@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,21 +12,24 @@ body {
     color: #333;
 }
 
+/* Container */
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+    background: linear-gradient(135deg, #2d3e50, #2980b9); /* DevOps-style blue gradient */
+    color: white;
+    padding: 40px 0;
     text-align: center;
+    border-bottom: 4px solid #2980b9;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
@@ -35,47 +39,121 @@ header p {
 
 header .button {
     background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
     text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
 }
 
 header .button:hover {
     background-color: #0056b3;
 }
 
+/* DevOps-Themed Section Background */
+#skills, #experience {
+    background-image: url('images/https://www.istockphoto.com/photo/hand-of-human-putting-hexagon-piece-to-full-fill-the-part-of-software-development-gm1489620329-514488655?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fdevops%2F&utm_term=devops'); /* Replace with your DevOps-themed image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+#skills ul, #experience ul {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#skills ul li, #experience ul li {
+    color: #fff;
+    border-bottom: 1px solid #555;
+    padding: 10px 0;
+}
+
+/* Section Styles */
 section {
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 h2 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 2rem;
+    color: #2980b9;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     text-align: center;
+    position: relative;
 }
 
+h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #007bff;
+    display: block;
+    margin: 10px auto;
+}
+
+/* List Styles */
 ul {
     list-style-type: none;
-    margin-bottom: 20px;
 }
 
 ul li {
     background: #fff;
-    padding: 10px;
-    margin-bottom: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
+    padding: 20px;
+    background: #2d3e50;
+    color: white;
 }
 
 footer p {
     font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
 }

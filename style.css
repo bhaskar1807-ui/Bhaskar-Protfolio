@@ -53,7 +53,7 @@ header .button:hover {
 
 /* DevOps-Themed Section Background */
 #skills, #experience {
-    background-image: url('images/https://www.istockphoto.com/photo/hand-of-human-putting-hexagon-piece-to-full-fill-the-part-of-software-development-gm1489620329-514488655?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fdevops%2F&utm_term=devops'); /* Replace with your DevOps-themed image */
+    background-image: url('images/devops-bg.jpg'); /* Replace with your DevOps-themed image */
     background-size: cover;
     background-position: center;
     color: white;

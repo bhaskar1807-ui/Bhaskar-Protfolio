@@ -1,99 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bhaskar Rao Gorripati - DevOps Engineer Portfolio">
-    <title>Bhaskar Rao Gorripati | DevOps Engineer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <title>Bhaskar Rao Gorripati Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    <header>
-        <div class="container">
-            <h1>Bhaskar Rao Gorripati</h1>
-            <p>DevOps Engineer</p>
-            <p>Montgomery, AL | <a href="mailto:gbhaskar1807@gmail.com">gbhaskar1807@gmail.com</a> | +1 3348409113</p>
-            <a href="http://www.linkedin.com/in/bhaskarrao-g-3484a518a" class="button" target="_blank">LinkedIn Profile</a>
-        </div>
-    </header>
+    <style>
+      #typing-animation {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(20, end) infinite;
+      }
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a DevOps Engineer with over 1.10 years of experience in Continuous Integration and Delivery (CI/CD), Cloud Engineering, and Site Reliability Engineering (SRE). I work with tools like Jenkins, Bitbucket, Jira, and various cloud platforms, striving to help organizations automate and streamline processes for higher efficiency.</p>
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+
+      .zoom-effect:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#home-section">Bhaskar Rao Gorripati</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+            <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
         </div>
+      </div>
+    </nav>
+    
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
+              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.jpg);">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex align-items-center ftco-animate">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Bhaskar Rao Gorripati</span></h1>
+                  <span id="typing-animation">DevOps Engineer</span>
+                  <h2>A Specialist in CI/CD, Cloud, and Infrastructure</h2>
+                  <p><a href="https://www.linkedin.com/in/bhaskarrao-g-3484a518a" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+                  <a href="https://github.com" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Master of Science in Management Information Systems</strong> - Auburn University at Montgomery, AL (GPA: 3.4/4) - Anticipated Graduation: December 2024</li>
-                <li><strong>Bachelor of Technology in Electrical and Electronics Engineering</strong> - Acharya Nagarjuna University, College of Engineering, Guntur (GPA: 7.3/10) - August 2020</li>
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-5 d-flex">
+            <div class="img-about img d-flex align-items-stretch">
+              <div class="overlay"></div>
+              <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+            <h1 class="big">About</h1>
+            <h2 class="mb-4">About Me</h2>
+            <p>I am a DevOps Engineer with over 1.10 years of experience in Continuous Integration and Delivery (CI/CD), Cloud Engineering, and Site Reliability Engineering (SRE). I am passionate about automating and optimizing software development workflows using tools like Jenkins, Bitbucket, and AWS.</p>
+            <ul class="about-info mt-4 px-md-0 px-2">
+              <li><span>Location:</span> Montgomery, AL</li>
+              <li><span>Job Role:</span> DevOps Engineer</li>
+              <li><span>Email:</span> bgorripa@aum.edu</li>
+              <li><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/bhaskarrao-g-3484a518a">LinkedIn</a></li>
+              <li><span>Certifications:</span> Microsoft Power BI Data Analyst, Azure Certification</li>
             </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>CI/CD Tools: Jenkins, Bitbucket, Jira, Copado, Confluence</li>
-                <li>Cloud Platforms: AWS, GCP, Microsoft Azure, OpenStack</li>
-                <li>Version Control: Source Code Repository Management (Bitbucket)</li>
-                <li>Server & Pipeline Management: Code Deployment, Workflow Configuration, Jenkins Pipelines</li>
-                <li>Team Collaboration: Client Communication, Standup Updates, and Collaboration Tools</li>
-                <li>Others: License Management, Debugging, and Server Maintenance</li>
-            </ul>
+    <section class="ftco-section" id="resume-section">
+      <div class="container">
+        <h2>Resume</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Experience</h3>
+            <div class="resume-wrap">
+              <span class="date">June 2021 – April 2023</span>
+              <h2>DevOps Engineer</h2>
+              <span class="position">Infosys | Client: Broadcom</span>
+              <p>• Managed Jira projects and workflows, set up CI/CD pipelines in Jenkins, and optimized Bitbucket repositories.<br>
+                • Monitored and resolved Jenkins job failures.<br>
+                • Deployed application-level changes, ensuring server health and uptime.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3>Education</h3>
+            <div class="resume-wrap">
+              <span class="date">Anticipated Dec 2024</span>
+              <h2>Master of Science, Management Information Systems</h2>
+              <span class="position">Auburn University, Montgomery, AL</span>
+            </div>
+            <div class="resume-wrap">
+              <span class="date">August 2020</span>
+              <h2>Bachelor of Technology, Electrical and Electronics Engineering</h2>
+              <span class="position">Acharya Nagarjuna University, Guntur</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="experience">
-        <div class="container">
-            <h2>Professional Experience</h2>
-            <h3>DevOps Engineer | Systems Engineer at Infosys | Client: Broadcom</h3>
-            <p><em>June 2021 – April 2023</em></p>
-            <ul>
-                <li>Managed user roles and permissions in Jira, Bitbucket, Copado, and ALM tools.</li>
-                <li>Created and modified Jira project workflows and maintained CI/CD pipelines in Jenkins.</li>
-                <li>Supported code deployment and ensured server health.</li>
-                <li>Collaborated with clients through standup meetings and provided updates on progress.</li>
-                <li>Managed source code repositories and monitored Jira, Confluence, and Bitbucket licenses.</li>
-            </ul>
-        </div>
+    <section class="ftco-section" id="contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:bgorripa@aum.edu">bgorripa@aum.edu</a></p>
+        <p>Phone: +1 3348409113</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/bhaskarrao-g-3484a518a">LinkedIn</a></p>
+      </div>
     </section>
 
-    <section id="certifications">
-        <div class="container">
-            <h2>Certifications & Achievements</h2>
-            <ul>
-                <li>Certified Microsoft Power BI Data Analyst</li>
-                <li>Primary Microsoft Azure Certification (Infosys)</li>
-                <li>Certification of Appreciation (Infosys)</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me for any opportunities or inquiries!</p>
-            <ul>
-                <li>Email: <a href="mailto:gbhaskar1807@gmail.com">gbhaskar1807@gmail.com</a></li>
-                <li>Phone: +1 3348409113</li>
-                <li>LinkedIn: <a href="http://www.linkedin.com/in/bhaskarrao-g-3484a518a" target="_blank">LinkedIn Profile</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Bhaskar Rao Gorripati. All rights reserved.</p>
-        </div>
+    <footer class="ftco-footer ftco-section">
+      <div class="container text-center">
+        <p>&copy; 2024 Bhaskar Rao Gorripati. All rights reserved.</p>
+      </div>
     </footer>
 
-</body>
+  </body>
 </html>
-<img src=images/bhaskarrao-g-3484a518a"
-alt="description">
